@@ -15,6 +15,7 @@ ZoomApp::ZoomApp(float maxWorldWidth, float maxWorldHeight) : mIsZooming(false) 
     mWindow = sf::RenderWindow(
         sf::VideoMode(sf::Vector2u(static_cast<int>(mWorldSize.x), static_cast<int>(mWorldSize.y))),
         "Zoom App");
+    mWindow.setFramerateLimit(60);
     // Set initial viewport
     updateViewAfterResize();
     mWindow.setView(mWorldViewDefault);
